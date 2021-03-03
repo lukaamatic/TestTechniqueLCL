@@ -59,15 +59,16 @@ def response():
                                                func.upper(Data.prenom) == request.form["prenom"].upper(),
                                                Data.datenaiss == date_naissance).first()
 
-        # Query pour la date du décès
-        date_deces = db.session.query(Data).filter(func.upper(Data.nom) == request.form["nom"].upper(),
-                                               func.upper(Data.prenom) == request.form["prenom"].upper(),
-                                               Data.datenaiss == date_naissance).first().datedeces
+
 
         # Selon si la personne est présente en base ou non, on renvoie un message différent
         if exists is None:
             return render_template("index.html", text="Cette personne n'est pas décédée")
         else:
+            # Query pour la date du décès
+            date_deces = db.session.query(Data).filter(func.upper(Data.nom) == request.form["nom"].upper(),
+                                                       func.upper(Data.prenom) == request.form["prenom"].upper(),
+                                                       Data.datenaiss == date_naissance).first().datedeces
             return render_template("index.html",
                                    text=request.form["nom"] + " " + request.form["prenom"] +
                                    ", dont la date de naissance est le " +
