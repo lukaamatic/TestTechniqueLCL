@@ -1,0 +1,4 @@
+venv/
+data_managment/data_folder/*
+!data_managment/data_folder/accueil.PNG
+!data_managment/data_folder/deces.PNG

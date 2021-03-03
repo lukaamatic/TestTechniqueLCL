@@ -1,0 +1,15 @@
+
+START - automation started - Tue Mar 02 2021 18:20:33 GMT+0100 (Paris, Madrid)
+
+https://www.insee.fr/fr/information/4769950 - Fichiers décennaux des personnes décédées depuis 1970 | Insee
+click //*[@id="consulter"]/div/div[4]/a
+click //*[@id="consulter"]/div/div[5]/a
+click //*[@id="consulter"]/div/div[6]/a
+click //*[@id="consulter"]/div/div[7]/a
+click //*[@id="consulter"]/div/div[8]/a
+https://www.insee.fr/fr/information/4190491 - Fichiers des personnes décédées depuis 1970 | Insee
+click //*[@id="consulter"]/div/div[5]/a
+click //*[@id="consulter"]/div/div[7]/a
+click //*[@id="consulter"]/div/div[8]/a
+click //*[@id="consulter"]/div/div[9]/a
+wait 600

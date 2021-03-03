@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title> Deces en France depuis 1970</title>
+    <head>
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+        <body>
+            <div class="container">
+                <h1>La personne est-elle décédée ?</h1>
+                <h3>Veuillez entrer un prénom, un nom et une date de naissance.</h3>
+                <div class="message">
+                    {{text | safe}}
+                </div>
+                <form action="{{url_for('response')}}" method="POST">
+                    <input title="" placeholder="Entrez le prénom de la personne à rechercher" type="text" name="prenom"> <br>
+                    <input title="" placeholder="Entrez le nom de la personne à rechercher" type="text" name="nom"> <br>
+                    <input title="" placeholder="Entrez la date de naissance de la personne à rechercher" type="date" name="datenaiss"> <br>
+                    <button type="submit">Confirmer </button>
+                </form>
+                <img src="./static/lcl.png" align="middle" style="width:100px;height:100px;"/>
+            </div>
+        </body>
+</html>
